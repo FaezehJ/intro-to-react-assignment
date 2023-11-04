@@ -1,5 +1,5 @@
 html {
-  background-color: #282c34;
+  background-color: #1f3e29;
 }
 
 .App {
@@ -23,7 +23,7 @@ header {
 }
 
 .user-profile-wrapper {
-  background-color: #282c34;
+  background-color: rgb(77, 138, 76);
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;

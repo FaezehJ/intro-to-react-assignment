@@ -1,7 +1,12 @@
-import "./styles/App.css";
+import React from "react";
+import UserProfile from "./UserProfile";
+import "../styles/App.css";
+
+
 function App() {
-  //The array of users to render in the assignment
+  
   const users = [
+    // users array
     {
       name: "John Doe",
       email: "john@example.com",
@@ -37,20 +42,24 @@ function App() {
       email: "daniel@example.com",
       imgUrl: "https://xsgames.co/randomusers/avatar.php?g=male",
     },
+    
     {
       name: "Olivia Martinez",
       email: "olivia@example.com",
       imgUrl: "https://xsgames.co/randomusers/avatar.php?g=female",
     },
   ];
+
   return (
     <div className="App">
-      <header >
-        <h1 className="">User Profiles:</h1>
+      <header>
+        <h1>User Profiles:</h1>
       </header>
       <div className="user-profile-wrapper">
-        {/* Render the array of users using the UserProfile in this div */}
-
+        {/* Correctly map users to UserProfile components */}
+        {users.map((user) => (
+          <UserProfile key={user.email} name={user.name} email={user.email} imgUrl={user.imgUrl} />
+        ))}
       </div>
     </div>
   );
